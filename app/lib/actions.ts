@@ -4,6 +4,7 @@ import { sql } from "@vercel/postgres";
 import { revalidatePath } from 'next/cache';
 import { redirect } from "next/navigation";
 import Form from "../ui/invoices/create-form";
+import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 
 const FormSchema = z.object({
